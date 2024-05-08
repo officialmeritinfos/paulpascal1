@@ -1,6 +1,7 @@
 @extends('home.base')
 @section('content')
-    <!-- End Page-title Area -->
+
+    <!-- page-banner start -->
     <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -29,40 +30,52 @@
             </div>
         </div>
     </section>
+    <!-- page-banner end -->
 
-    <!-- Business One -->
-    <section class="business-one style-five" style="background-image:url(home/images/background/pattern-39.png)">
-        <div class="auto-container">
-            <!-- Business One Lower Section -->
-            <div class="business-one_lower-section text-center" style="margin-top: 10rem;">
-                <h6>Main Details:</h6>
-                <div class="row clearfix">
-                    <!-- Branch Column -->
-                    <div class="branch-column col-lg-4 col-md-6 col-sm-12 mx-auto">
-                        <div class="branch-column_inner">
-                            <div class="branch-name"> (Head Office)</div>
-                            <ul class="branch-info_list">
-                                <li>{!! $web->address !!}
-                                </li>
-                                <li><a href="tel:"></a> </li>
-                                <li><a href="mailto:{{$web->email}}">{{$web->email}}</a></li>
-                            </ul>
+    <!-- Start Contact Info Area -->
+    <section class="contact-info-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-contact-info">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Us:</h3>
+                        <a href="mailto:{{$web->email}}">{{$web->email}}</a>
+                    </div>
+                </div>
+                @if(!empty($web->phone))
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Call Us:</h3>
+                            <a href="tel:{{$web->phone}}">Tel. {{$web->phone}}</a>
                         </div>
+                    </div>
+                @endif
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-contact-info">
+                        <i class="bx bx-location-plus"></i>
+                        <h3>London</h3>
+                        <a href="#">{!! $web->address !!}</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-contact-info">
+                        <i class="bx bx-support"></i>
+                        <h3>Live Chat</h3>
+                        <a href="#">live chat all the time with our company 24/7</a>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- End Business One -->
+    <!-- End Contact Info Area -->
 
-    <!-- Map One -->
-    <section class="map-one">
-        <div class="map-outer">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s" allowfullscreen=""></iframe>
-        </div>
-    </section>
-    <!-- End Map One -->
+    <!-- Start Map Area  -->
+    <div class="map-area">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.5033100798687!2d25.2787138!3d54.6831702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd94122c9451db%3A0xcc9812acc73ac262!2sPalangos%20g.%204%2C%2001402%20Vilnius%2C%20Lithuania!5e0!3m2!1sen!2sus!4v1702465594991!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- End Map Area -->
 
 
 @endsection

@@ -1,239 +1,373 @@
-@extends('home.innerBase')
+@extends('home.base')
 @section('content')
 
-    @push('body')
-
-        <body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-294 elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-294">
-        @endpush
-        <div data-elementor-type="wp-post" data-elementor-id="294" class="elementor elementor-294" data-elementor-settings="[]">
-            <div class="elementor-section-wrap">
-                <style>
-                    .fullscreen-bg {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        overflow: hidden;
-                    }
-                    .fullscreen-bg__video {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: auto;
-                    }
-                    @media (min-aspect-ratio: 16/9) {
-                        .fullscreen-bg__video {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    @media (max-width: 767px) {
-                        .fullscreen-bg__video {
-                            width: auto;
-                            height: auto;
-                        }
-                        .fullscreen-bg{
-                            width: 1000px;
-                        }
-                    }
-                    #overlay {
-                        position: absolute;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(0,0,0,0.3);
-                        z-index: 1;
-                        cursor: pointer;
-                    }
-                </style>
-                <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-f1ac91d elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="f1ac91d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
-                    <div class="elementor-background-overlay">
-                    </div>
-                    <div id="overlay"></div>
-                    <div class="fullscreen-bg">
-                        <video autoplay muted loop playsinline class="fullscreen-bg__video">
-                            <source src="{{asset('home/static/temp/video/video3.mp4')}}" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="elementor-container elementor-column-gap-default" style="z-index: 2">
-                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b36272c elementor-invisible" data-id="b36272c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-467b2a0 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="467b2a0" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h1 class="elementor-heading-title elementor-size-default">{{$pageName}}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-293bf1b ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="293bf1b" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">
-                                            Allow our experts to find the best projects and invest. NFTs yield high profit returns.
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- page-banner start -->
+    <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="page-banner__content mb-xs-10 mb-sm-15 mb-md-15 mb-20">
+                        <div class="transparent-text">{{$pageName}}</div>
+                        <div class="page-title">
+                            <h1>{{$pageName}}</h1>
                         </div>
                     </div>
-                </section>
 
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$pageName}}</li>
+                        </ol>
+                    </nav>
+                </div>
 
-<section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-9e55886 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9e55886" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
-    <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3dc3f31 elementor-invisible" data-id="3dc3f31" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-80935ab ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="80935ab" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h6 class="elementor-heading-title elementor-size-default">About NFTs
-                        </h6>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-9193c26 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="9193c26" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h2 class="elementor-heading-title elementor-size-default">Non Fungible Token
-                        </h2>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-ca77d0c ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="ca77d0c" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        <p>
-                            NFTs, or non-fungible tokens, represent unique assets such as an irreplaceable Doge meme or an autographed tweet. NFTs can take various forms, including art pieces, domain names, tweets, music compositions, trading cards, or any digital good with an attached value.
-                        </p>
-                        <p>
-                            Despite being around since 2014, NFTs have recently gained significant popularity as the modern way to buy and sell digital artwork. In fact, since 2017, over $174 million has been spent on NFTs. Managing NFTs is akin to handling cryptocurrencies and can be done through mobile or online apps. Smartphone users can easily accomplish this using cryptocurrency exchanges.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-2e76fa3 elementor-widget elementor-widget-button" data-id="2e76fa3" data-element_type="widget" data-settings="{&quot;_ob_butterbutton_use_it&quot;:&quot;no&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="button.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-button-wrapper">
-                            <a href="{{route('register')}}" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-horizontal" role="button">
-                        <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text">Start Membership <i class="fa fa-arrow-circle-right"></i>
-                          </span>
-                        </span>
-                            </a>
-                        </div>
+                <div class="col-md-6">
+                    <div class="page-banner__media mt-xs-30 mt-sm-40">
+                        <img src="{{asset('home/img/page-banner/page-banner-start.svg')}}" class="img-fluid start" alt="">
+                        <img src="{{asset('home/img/page-banner/page-banner.jpg')}}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3dc3f31 elementor-invisible" data-id="3dc3f31" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-80935ab ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="80935ab" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <img width="1600" height="1024" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/08/nft.jpg')}}" class="attachment-full size-full" alt="" loading="lazy" />
+    </section>
+    <!-- page-banner end -->
+
+    <!-- our-company start -->
+    <section class="our-company  pt-xs-80 pb-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="our-company__meida">
+                        <img src="{{asset('home/img/nft-1200x1200.jpg')}}" alt="" class="img-fluid">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="our-company__content mt-md-50 mt-sm-40 mt-xs-35">
+                        <span class="sub-title fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-20 d-block">
+                            <img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt="">
+                            NFT</span>
+                        <h2 class="title color-d_black mb-20 mb-sm-15 mb-xs-10">What Is a Non-Fungible Token (NFT)</h2>
+
+                        <div class="descriiption font-la mb-30 mb-md-25 mb-sm-20 mb-xs-15">
+                            <p> Non-fungible tokens or NFTs are cryptographic assets on a blockchain with unique identification codes and metadata that distinguish them from each other. Unlike cryptocurrencies, they cannot be traded or exchanged at equivalency. This differs from fungible tokens like cryptocurrencies, which are identical to each other and, therefore, can be used as a medium for commercial transactions.  </p>
+                            <p> The distinct construction of each NFT has the potential for several use cases. For example, they are an ideal vehicle to digitally represent physical assets like real estate and artwork. Because they are based on blockchains, NFTs can also be used to remove intermediaries and connect artists with audiences or for identity management. NFTs can remove intermediaries, simplify transactions, and create new markets. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="our-company__content mt-md-50 mt-sm-40 mt-xs-35">
+                        <span class="sub-title fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-20 d-block">
+                            <img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt="">
+                            </span>
+                        <h2 class="title color-d_black mb-20 mb-sm-15 mb-xs-10">UNDERSTANDING NFTS</h2>
+
+                        <div class="descriiption font-la mb-30 mb-md-25 mb-sm-20 mb-xs-15">
+                            <p>Like physical money, cryptocurrencies are fungible i.e., they can be traded or exchanged, one for another. For example, one Bitcoin is always equal in value to another Bitcoin. Similarly, a single unit of Ether is always equal to another unit. This fungibility characteristic makes cryptocurrencies suitable for use as a secure medium of transaction in the digital economy.  </p>
+                            <p> NFTs shift the crypto paradigm by making each token unique and irreplaceable, thereby making it impossible for one non-fungible token to be equal to another. They are digital representations of assets and have been likened to digital passports because each token contains a unique, non-transferable identity to distinguish it from other tokens. They are also extensible, meaning you can combine one NFT with another to “breed” a third, unique NFT.  </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6">
+                    <div class="our-company__meida">
+                        <img src="{{asset('home/img/nfttttt.png')}}" alt="" class="img-fluid">
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-4d222d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4d222d8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
-    <div class="elementor-background-overlay">
-    </div>
-    <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6bf193d" data-id="6bf193d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-96bfd81 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="96bfd81" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h6 class="elementor-heading-title elementor-size-default">Company Value
-                        </h6>
-                    </div>
+    </section>
+    <!-- our-company end -->
+
+    <!-- start testimonials-section -->
+    <section class="testimonials-section section-padding">
+        <div class = "container">
+            <div id="plan" class="b-price pattern-bg">
+                <br>
+                <br>
+                <div class="sec_middle_title">
+                    <h2>Types of <span> NFTs</span></h2>
                 </div>
-                <div class="elementor-element elementor-element-6bea625 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="6bea625" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h2 class="elementor-heading-title elementor-size-default">Its all about your Future
-                        </h2>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-f4d2de9 elementor-widget__width-initial ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-text-editor" data-id="f4d2de9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        <p>We focus on comprehensive financial advice and investment services
-                        </p>
-                    </div>
-                </div>
-                <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-db01ba1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="db01ba1" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
-                    <div class="elementor-container elementor-column-gap-default">
-                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-a3879b8 elementor-invisible" data-id="a3879b8" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-9f05554 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="9f05554" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="ekit-wid-con" >
-                                            <!-- link opening -->
-                                            <!-- end link opening -->
-                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
-                                                <div class="box-body">
-                                                    <h3 class="elementskit-info-box-title">
-                                                        Vision
-                                                    </h3>
-                                                    <p>In a fast-moving and increasingly complex global economy, our success depends on how faithfully we adhere to our core principles: delivering exceptional client service and acting with integrity.
-                                                    </p>
-                                                </div>
+                <div class="container">
+                    <div class="b-offers-holder-full">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="0.1s"
+                                 >
+                                <div style="padding:0px" class="offer-item even-item text-center offer-content">
+                                    <div style="padding:20px 0px;font-weight: bolder;text-transform: uppercase;" class="offer-name">
+                                        NFT art
+                                    </div>
+
+                                    <h2 class="text-center"><i class="fa fa-paint-brush" style="font-size:90px; color: #ff9801;" aria-hidden="true"></i></h2>
+                                    <div class="offer-advantages">
+                                        <div style="padding:0px 20px" class="row type-2">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li>
+
+                                                    </li>
+                                                    <li >
+                                                        Giving artists a chance to tokenize and profit (rather generously) off of their artwork is one of the top selling points of NFT art. It refers to any type of digital art that is stored on a blockchain. The artwork is then owned by the token holder and can be traded or sold just like any other NFTs. NFT art also allows for artists to build a global fan base without the assistance of galleries, distributors or curators</b>
+                                                    </li>
+
+
+                                                </ul>
                                             </div>
                                         </div>
+
+                                        <div style="  border-bottom: 1px solid #e8ecef;
+padding: 0px 0 70px;
+margin-bottom: -24px;
+">
+                                        </div>
+                                        <button style="background-color: #ff9801;" class="btn btn-primary">
+                                            <a style="color: #fff;" href="{{route('register')}}">
+                                                Invest Now
+                                            </a>
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9ddae7c elementor-invisible" data-id="9ddae7c" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-0c4c0a6 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="0c4c0a6" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="ekit-wid-con" >
-                                            <!-- link opening -->
-                                            <!-- end link opening -->
-                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
-                                                <div class="box-body">
-                                                    <h3 class="elementskit-info-box-title">
-                                                        Mission
-                                                    </h3>
-                                                    <p>Our mission is to generate world-class investment returns over the long term. We aspire to do so in a way that makes our partners and portfolio companies proud, as we build a unique, global company.
-                                                    </p>
-                                                </div>
+
+                            <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="0.1s" >
+                                <div style="padding:0px" class="offer-item even-item text-center offer-content">
+                                    <div style="padding:20px 0px;font-weight: bolder;text-transform: uppercase;" class="offer-name">
+                                        NFT music
+                                    </div>
+
+                                    <h2 class="text-center"><i class="fa fa-music" style="font-size:90px; color: #ff9801;" aria-hidden="true"></i></h2>
+                                    <div class="offer-advantages">
+                                        <div style="padding:0px 20px" class="row type-2">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li>
+
+                                                    </li>
+                                                    <li >
+                                                        From Grimes and Kings of Leon to Lindsay Lohan and the Rolling Stones—musicians have been tokenizing their tracks and selling them as NFTs. Music NFTs witnessed a significant boost this year, with sales increasing from US$50,000 in September 2020 to US$27 million in March 2021. DJ and founder of Royal, an NFT music platform, noted, “A true fan might want to own something way earlier than a speculator would even get wind of it. Democratizing access to asset classes is a huge part of crypto’s future.” Additionally, with NFT music, artists don’t need to rely on record labels to usher in sales from their music.</b>
+                                                    </li>
+
+
+                                                </ul>
                                             </div>
                                         </div>
+
+                                        <div style="  border-bottom: 1px solid #e8ecef;
+padding: 0px 0 70px;
+margin-bottom: -24px;
+">
+                                        </div>
+                                        <button style="background-color: #ff9801;" class="btn btn-primary">
+                                            <a style="color: #fff;" href="{{route('register')}}">
+                                                Invest Now
+                                            </a>
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-abf2b90 elementor-invisible" data-id="abf2b90" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:240,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-a9e6bcc ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="a9e6bcc" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="ekit-wid-con" >
-                                            <!-- link opening -->
-                                            <!-- end link opening -->
-                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
-                                                <div class="box-body">
-                                                    <h3 class="elementskit-info-box-title">
-                                                        Guarantee
-                                                    </h3>
-                                                    <p>We are here because we are passionate about open, transparent markets and aim to be a major driving force in widespread adoption, we are the first and the best in investment management.
-                                                    </p>
-                                                </div>
+
+
+                            <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="0.1s" >
+                                <div style="padding:0px" class="offer-item even-item text-center offer-content">
+                                    <div style="padding:20px 0px; font-weight: bolder;text-transform: uppercase;" class="offer-name">
+                                        NFT game
+                                    </div>
+
+                                    <h2 class="text-center"><i class="fa fa-gamepad" style="font-size:90px; color: #ff9801;" aria-hidden="true"></i></h2>
+                                    <div class="offer-advantages">
+                                        <div style="padding:0px 20px" class="row type-2">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li>
+
+                                                    </li>
+                                                    <li >
+                                                        Play video games, earn cryptocurrency. Some of the newest video games are departing from the traditional video game model and adopting a more profitable one. With NFT games, players get to collect exclusive rewards that they can later trade as NFTs. One of the first games to implement this was CryptoKitties. The game allows players to breed and trade digital cats using Ethereum-based smart contracts.</b>
+                                                    </li>
+
+
+                                                </ul>
                                             </div>
                                         </div>
+
+                                        <div style="  border-bottom: 1px solid #e8ecef;
+padding: 0px 0 70px;
+margin-bottom: -24px;
+">
+                                        </div>
+                                        <button style="background-color: #ff9801;" class="btn btn-primary">
+                                            <a style="color: #fff;" href="{{route('register')}}">
+                                                Invest Now
+                                            </a>
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>
+
+
+                            <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="0.1s" >
+                                <div style="padding:0px" class="offer-item even-item text-center offer-content">
+                                    <div style="padding:20px 0px;font-weight: bolder;text-transform: uppercase;" class="offer-name">
+                                        NFT fashion
+                                    </div>
+
+                                    <h2 class="text-center"><i class="fas fa-tshirt" style="font-size:90px; color: #ff9801;" aria-hidden="true"></i></h2>
+                                    <div class="offer-advantages">
+                                        <div style="padding:0px 20px" class="row type-2">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li>
+
+                                                    </li>
+                                                    <li >
+                                                        Just because you can’t wear it physically doesn’t mean you can’t carry it in style…on your device. Be it Karl Lagerfeld or Gucci—nearly all fashion designers want a piece of the NFT pie. For that, they are designing exclusive bags, video games, couture and more to be sold on NFT marketplaces. NFT fashion provides a new revenue stream for designers. Some of the most well-known designers and brands that have ventured into the world of NFTs include Louis Vuitton, Yves Saint Laurent, Alexander Wang and Prada.</b>
+                                                    </li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div style="  border-bottom: 1px solid #e8ecef;
+padding: 0px 0 70px;
+margin-bottom: -24px;
+">
+                                        </div>
+                                        <button style="background-color: #ff9801;" class="btn btn-primary">
+                                            <a style="color: #fff;" href="{{route('register')}}">
+                                                Invest Now
+                                            </a>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            </ul>
                         </div>
                     </div>
-                </section>
+
+
+
+
+                </div>
             </div>
         </div>
-    </div>
-</section>
-</div>
-</div>
+    </section>
+
+    <section class="protfolio_wrapper section-padding">
+        <div class="container mb-30 ">
+            <div class="row align-items-center section-padding_3">
+                <div class="col-lg-8 col-md-8">
+                    <div class="section-title">
+                        <h5> <img src="{{asset('home/img/team-details/badge-line.svg')}}" alt>NFTS</h5>
+                        <h2>Some Amazing <span>NFTS</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" our-porfolio__slider__2 mt-30">
+
+
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/tennis-nft.jpg')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">The world’s first Athletic Career Token</span>
+                            <h5 class="title color-secondary">Worth: $5,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/iconic-crypto-queen-png.png')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">
+                                Paris Hilton’s Planet Paris
+                            </span>
+                            <h5 class="title color-secondary">Worth: $1,000,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/bored-apes.jpg')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">
+                                Bored Ape Yacht Club
+                            </span>
+                            <h5 class="title color-secondary">Worth: $24,400,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/nba-top-shot.jpg')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">
+                                LeBron dunk
+                            </span>
+                            <h5 class="title color-secondary">Worth: $210,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/coca-cola-nft-min-png.jpg')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">
+                                Coca-Cola NFTs
+                            </span>
+                            <h5 class="title color-secondary">Worth: $575,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="our-project__item overflow-hidden">
+                    <img src="{{asset('home/img/louis-the-game-nft.jpg')}}" alt="">
+
+                    <div class="content d-flex align-items-center justify-content-between">
+                        <div class="text">
+                            <span class="fw-500 color-primary d-block mb-10 text-uppercase">
+                                Louis Vuitton video game
+                            </span>
+                            <h5 class="title color-secondary">Worth: $69,000,000</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- protfolio_wrapper end -->
+
 
 @endsection

@@ -1,6 +1,7 @@
 @extends('home.base')
 @section('content')
-    <!-- End Page-title Area -->
+
+    <!-- page-banner start -->
     <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -29,10 +30,10 @@
             </div>
         </div>
     </section>
-
+    <!-- page-banner end -->
 
     <!-- END SECTION TEAM -->
-    <section class="promo-section ptb-100" style="margin-top: 3rem;margin-bottom: 5rem;">
+    <section class="promo-section ptb-100" style="margin-top: 3rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -211,7 +212,7 @@
                             <div id="collapse-2-8" class="collapse" aria-labelledby="heading-2-8"
                                  data-parent="#accordion-2">
                                 <div class="card-body">
-                                    <p>Yes we are officially and properly registered with the United State . our company registration number is USFDAISO34847676   and registered with the name {{$siteName}}</p>
+                                    <p>Yes we are officially and properly registered with the united kingdom company house our company registration number is 138898   and registered with the name {{$siteName}} LTD</p>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +248,7 @@
                             <div id="collapse-2-10" class="collapse" aria-labelledby="heading-2-10"
                                  data-parent="#accordion-2">
                                 <div class="card-body">
-                                    <p>You can make as many deposit as you want on any of our investment plans except theHERCULES ARBITRAGE PLAN where you can only invest two times. And you can only withdraw once in the HERCULES ARBITRAGE PLAN.</p>
+                                    <p>You can make as many deposit as you want on any of our investment plans except the Starter Plan where you can only invest two times. And you can only withdraw once in the Starter plan.</p>
                                 </div>
                             </div>
                         </div>

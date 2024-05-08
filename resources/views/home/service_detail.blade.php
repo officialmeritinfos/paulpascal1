@@ -1,6 +1,7 @@
 @extends('home.base')
 @section('content')
-    <!-- End Page-title Area -->
+
+    <!-- page-banner start -->
     <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -29,25 +30,28 @@
             </div>
         </div>
     </section>
+    <!-- page-banner end -->
 
-    <!-- Start Services Details Area -->
-    <div class="services-details-area ptb-100">
+
+    <!-- End Service Details Area -->
+    <section class="service-details-area ptb-100 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="services-details-desc">
+                <div class="col-lg-12">
+                    <div class="service-details-wrap">
+                        <div class="service-img">
+                            <img src="{{asset('home/serv/'.$service->photo)}}" alt="Image">
+                        </div>
                         <h3>{{$service->title}}</h3>
-                        <p>{{$service->short}}</p>
-                        <img src="{{asset('home/serv/'.$service->photo)}}" alt="image">
                         <p>
                             {!! str_replace('MYSITE',$siteName,$service->content) !!}
                         </p>
                     </div>
                 </div>
-
-
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End Service Details Area -->
+
 
 @endsection

@@ -1,120 +1,7 @@
 @extends('home.base')
 @section('content')
-    @push('css')
-        <style>
 
-            small {
-                font-size: 14px;
-                text-transform: initial;
-            }
-            .single-price {
-                text-align: center;
-                background: #262626;
-                transition: .7s;
-                margin-top: 20px;
-            }
-            .single-price h3 {
-                font-size: 30px;
-                color: #000;
-                font-weight: 600;
-                text-align: center;
-                margin: 0;
-                margin-top: -80px;
-                margin-bottom: 1rem;
-                font-family: poppins;
-                color: #fff;
-            }
-            .single-price h4 {
-                font-size: 20px;
-                font-weight: 500;
-                color: #fff;
-            }
-            .single-price h4 span.sup {
-                vertical-align: text-top;
-                font-size: 15px;
-            }
-            .deal-top {
-                position: relative;
-                background: #104547;
-                font-size: 16px;
-                text-transform: uppercase;
-                padding: 136px 24px 0;
-            }
-            .deal-top::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: -50px;
-                width: 0;
-                height: 0;
-                border-top: 50px solid #104547;
-                border-left: 175px solid transparent;
-                border-right: 183px solid transparent;
-            }
-            .deal-bottom {
-                padding: 56px 16px 0;
-            }
-            .deal-bottom ul {
-                margin: 0;
-                padding: 0;
-            }
-            .deal-bottom  ul li {
-                font-size: 16px;
-                color: #fff;
-                font-weight: 300;
-                margin-top: 16px;
-                border-top: 1px solid #E4E4E4;
-                padding-top: 16px;
-                list-style: none;
-            }
-            .btn-area a {
-                display: inline-block;
-                font-size: 18px;
-                color: #fff;
-                background: #104547;
-                padding: 8px 64px;
-                margin-top: 32px;
-                border-radius: 4px;
-                margin-bottom: 40px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-decoration: none;
-            }
-
-
-            .single-price:hover {
-                background: #104547;
-            }
-            .single-price:hover .deal-top {
-                background: #262626;
-            }
-            .single-price:hover .deal-top:after {
-                border-top: 50px solid #262626;
-            }
-            .single-price:hover .btn-area a {
-                background: #262626;
-            }
-            /* ignore the code below */
-
-
-            .link-area
-            {
-                position:fixed;
-                bottom:20px;
-                left:20px;
-                padding:15px;
-                border-radius:40px;
-                background:#104547;
-            }
-            .link-area a
-            {
-                text-decoration:none;
-                color:#fff;
-                font-size:25px;
-            }
-        </style>
-    @endpush
-    <!-- End Page-title Area -->
+    <!-- page-banner start -->
     <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -143,43 +30,58 @@
             </div>
         </div>
     </section>
+    <!-- page-banner end -->
 
-    <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
+    <!-- pricing start -->
+    <section class="pricing pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-110 overflow-hidden" style="background-image: url({{asset('home/img/price/testimonial-bg.svg')}});">
         <div class="container">
-            <div class="row justify-content-center">
-                @foreach($packages as $package)
-                    @inject('option','App\Defaults\Custom')
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-price">
-                            <div class="deal-top">
-                                <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                <small class="text-white">{{$package->note}}</small>
-                            </div>
-                            <div class="deal-bottom">
-                                <ul class="deal-item">
-                                    <li>
-                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                            ${{number_format($package->maxAmount,2)}}
-                                        @else
-                                            Unlimited
-                                        @endif
-                                    </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
-                                    <li>Referral Bonus: {{$package->referral}}% </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="{{route('register')}}">Get Started</a>
+            <div class="row">
+                <div class="col-12">
+                    <div class="pricing__content mb-40 mb-xs-30 text-center">
+                        <h2 class="title color-d_black mb-25 mb-sm-20 mb-xs-15 text-capitalize">Our Investment Packages</h2>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-item-wraper">
+                <div class="row mb-minus-30 justify-content-center">
+                    @foreach($packages as $package)
+                        @inject('option','App\Defaults\Custom')
+                        <div class="col-xl-4 col-md-6">
+                            <div class="pricing__card d-flex flex-column justify-content-between mb-30 overflow-hidden">
+                                <div class="pricing__card-header">
+                                    <h3 class="title color-d_black">{{$package->name}}</h3>
+                                    <div class="price color-white mb-30 mb-sm-25 mb-xs-15 overflow-hidden">
+                                        {{$package->roi}}%
+                                        <span>/{{$option->getReturnType($package->returnType)}}</span></div>
+                                </div>
+                                <div class="pricing__card-body">
+                                    <ul>
+                                        <li><i class="fal fa-check-square"></i>
+                                            Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                ${{number_format($package->maxAmount,2)}}
+                                            @else
+                                                Unlimited
+                                            @endif
+                                        </li>
+                                        <li><i class="fal fa-check-square"></i>
+                                            Profit return: {{$package->numberOfReturns*$package->roi}}% {{$option->getReturnType($package->returnType)}}
+                                        </li>
+                                        <li><i class="fal fa-check-square"></i> Contract Duration: {{$package->Duration}}</li>
+                                        <li><i class="fal fa-check-square"></i> Referral Bonus: {{$package->referral}}%</li>
+                                        <li><i class="fal fa-check-square"></i> 24/7 System Monitoring</li>
+                                    </ul>
+                                    <a href="{{route('register')}}" class="theme-btn mt-40 mt-md-35">Get Started <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                @endforeach
+                        </div><!-- /pricing__card -->
+                    @endforeach
+                </div>
 
             </div>
         </div>
-    </div>
-
+    </section>
+    <!-- pricing end -->
 
 @endsection
