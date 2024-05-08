@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12" style="display: none;">
                         <div class="form-group">
                             <label>Phone</label>
                             <input class="form-control" type="text" placeholder="Enter your Phone"
@@ -93,13 +93,13 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label>Repeat password</label>
-                            <input class="form-control" type="password" name="password_confirmation"
-                                   placeholder="Enter your repeat password">
-                        </div>
-                    </div>
+{{--                    <div class="col-12">--}}
+{{--                        <div class="form-group">--}}
+{{--                            <label>Repeat password</label>--}}
+{{--                            <input class="form-control" type="password" name="password_confirmation"--}}
+{{--                                   placeholder="Enter your repeat password">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <div class="col-12">
                         <div class="form-group">
